@@ -14,10 +14,11 @@ else:
     print('Collecting initial file names to merge...')
     pdf_files_to_merge = []
     try:
+        pdf_files_to_merge.append(glob.glob( os.path.join(input_folder, '*Index*')       )[0])
         pdf_files_to_merge.append(glob.glob( os.path.join(input_folder, '*Executive*')   )[0])
         pdf_files_to_merge.append(glob.glob( os.path.join(input_folder, '*Balance*')     )[0])
         pdf_files_to_merge.append(glob.glob( os.path.join(input_folder, '*Profit*')      )[0])
-        pdf_files_to_merge.append(glob.glob( os.path.join(input_folder, '*Cash*')       )[0])
+        pdf_files_to_merge.append(glob.glob( os.path.join(input_folder, '*Cash*')        )[0])
         pdf_files_to_merge.append(glob.glob( os.path.join(input_folder, '*Receivables*') )[0])
         pdf_files_to_merge.append(glob.glob( os.path.join(input_folder, '*Payables*')    )[0])
     except:
